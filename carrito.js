@@ -5,7 +5,7 @@
   const EMAIL = 'bloque5oficial@gmail.com';
   // OPCIONAL: añade el número de WhatsApp del negocio en formato internacional.
   // Ejemplo: '34600111222'. Dejar vacío permite compartir el mensaje eligiendo destinatario.
-  const WHATSAPP_NUMBER = '';
+  const WHATSAPP_NUMBER = '34671165672';
   const MAX_QUANTITY = 10;
   const money = cents => (cents / 100).toLocaleString('es-ES', { style: 'currency', currency: 'EUR' });
   const cards = [...document.querySelectorAll('.producto[data-id]')];
