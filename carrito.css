@@ -1,0 +1,60 @@
+/* Carrito Bloque 5: añade estas reglas después de style.css */
+* { box-sizing: border-box; }
+.nav { align-items: center; flex-wrap: wrap; padding: 0 12px; }
+.nav-carrito { cursor: pointer; background: #ffcc00; border: 0; color: #000c3f; border-radius: 8px; font: bold 1em 'Racing Sans One', sans-serif; padding: 10px 15px; }
+.nav-carrito:hover, .nav-carrito:focus-visible { background: white; }
+#carrito-contador { background: #000c3f; color: white; padding: 3px 8px; border-radius: 15px; margin-left: 3px; }
+.carrito-intro { font-size: 1.05rem; }
+.producto { display: flex; flex-direction: column; align-items: center; }
+.producto h3 { min-height: 3em; }
+.precio-producto { margin: 6px 0 16px; }
+.opciones-producto { display: grid; gap: 11px; width: 100%; margin-top: auto; text-align: left; }
+.opciones-producto label { display: block; font-family: Arial, sans-serif; font-size: .86rem; font-weight: 700; }
+.opciones-producto select, .opciones-producto input { width: 100%; display: block; margin-top: 5px; border: 1px solid #ccd4eb; background: white; color: #001341; border-radius: 7px; font: 1rem Arial, sans-serif; padding: 10px; }
+.btn-anadir { background: #ffcc00; color: #000c3f; border: 0; border-radius: 7px; padding: 12px 8px; cursor: pointer; font: bold 1rem 'Racing Sans One', sans-serif; }
+.btn-anadir:hover, .btn-anadir:focus-visible { background: white; }
+.carrito-fondo { position: fixed; inset: 0; background: rgba(0,0,0,.60); z-index: 999; }
+.carrito-fondo[hidden] { display: none; }
+.carrito-panel { position: fixed; z-index: 1000; right: 0; top: 0; bottom: 0; height: 100dvh; width: min(430px, 100%); padding: 22px; display: flex; flex-direction: column; color: #000c3f; background: white; box-shadow: -8px 0 30px #0005; text-align: left; transform: translateX(105%); visibility: hidden; transition: transform .25s ease, visibility .25s; font-family: Arial, sans-serif; }
+.carrito-panel.abierto { transform: translateX(0); visibility: visible; }
+.carrito-cabecera { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+.carrito-cabecera h2 { margin: 0; font-family: 'Racing Sans One', sans-serif; }
+.carrito-cerrar { border: 0; background: none; cursor: pointer; font-size: 2rem; line-height: 1; color: #000c3f; }
+.carrito-lista { overflow-y: auto; flex: 1; padding: 14px 0; }
+.carrito-vacio { text-align: center; color: #345; font-size: 1rem; padding: 50px 12px; }
+.carrito-linea { display: flex; gap: 12px; border-bottom: 1px solid #e4e7ef; padding: 14px 0; }
+.carrito-linea img { width: 72px; height: 86px; border-radius: 8px; object-fit: cover; }
+.carrito-info { flex: 1; min-width: 0; }
+.carrito-info strong { font-size: .93rem; display: block; }
+.carrito-info small { color: #47516a; display: block; padding: 6px 0; }
+.carrito-controles { display: flex; justify-content: space-between; align-items: center; gap: 7px; }
+.carrito-controles button { border: 1px solid #bbb; border-radius: 5px; background: white; cursor: pointer; color: #000c3f; min-width: 29px; min-height: 29px; }
+.carrito-controles .eliminar { color: #a02233; border: 0; background: none; font-size: .83rem; text-decoration: underline; }
+.carrito-pie { padding: 15px 0 7px; border-top: 1px solid #ddd; }
+.carrito-total { display: flex; justify-content: space-between; align-items: center; font-size: 1.2rem; }
+.carrito-nota { color: #404f64; line-height: 1.4; font: .86rem Arial, sans-serif; }
+.btn-finalizar, .btn-copiar, .btn-whatsapp { display: block; padding: 13px; text-align: center; border-radius: 8px; text-decoration: none; font: bold .98rem Arial, sans-serif; cursor: pointer; width: 100%; }
+.btn-finalizar { background: #000c3f; color: #fff; margin-bottom: 8px; }
+.btn-finalizar:hover { background: #0c2392; }
+.btn-whatsapp { background: #176e48; color: #fff; margin: 12px 0 6px; }
+.btn-whatsapp:hover { background: #0c5434; }
+.carrito-instruccion-wa { font: .8rem Arial, sans-serif; color: #47516a; margin: 0 0 10px; }
+.carrito-instruccion-wa[hidden] { display: none; }
+.btn-whatsapp.desactivado { pointer-events: none; opacity: .45; }
+.btn-finalizar.desactivado { pointer-events: none; opacity: .45; }
+.btn-copiar { background: white; border: 1px solid #000c3f; color: #000c3f; }
+.btn-copiar:disabled { opacity: .45; cursor: not-allowed; }
+.carrito-aviso { position: fixed; z-index: 1100; bottom: 20px; left: 50%; transform: translateX(-50%); color: #000c3f; background: #ffcc00; border-radius: 8px; font: bold .9rem Arial, sans-serif; padding: 11px 16px; box-shadow: 0 4px 20px #0005; opacity: 0; pointer-events: none; transition: opacity .2s; }
+.carrito-aviso.visible { opacity: 1; }
+@media(max-width: 680px) {
+  body { padding: 12px !important; }
+  header { padding: 17px 0; }
+  .logo { max-width: min(260px, 90%); }
+  .nav { gap: 9px 15px; }
+  .nav li a { font-size: .98rem; }
+  #productos { padding: 25px 8px; }
+  .productos-container { gap: 20px; }
+  .producto { width: min(320px, 100%); }
+  .carrito-panel { padding: 18px; }
+}
+@media (prefers-reduced-motion: reduce) { .carrito-panel, .carrito-aviso { transition: none; } }

@@ -2,121 +2,182 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Camisetas y sudaderas Bloque 5. Prepara una consulta de disponibilidad sin pago en la web.">
   <title>Productos - Bloque 5</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Solitreo&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="carrito.css">
+  <script src="carrito.js" defer></script>
 </head>
-
 <body>
   <header>
     <img src="logotext.png" alt="Logo Bloque 5" class="logo">
   </header>
-
-  <nav>
+  <nav aria-label="Navegación principal">
     <ul class="nav">
       <li><a href="index.html">Inicio</a></li>
-      <li><a href="productos.html">Productos</a></li>
+      <li><a href="productos.html" aria-current="page">Productos</a></li>
       <li><a href="novedades.html">Novedades</a></li>
       <li><a href="contacto.html">Contacto</a></li>
+      <li><button class="nav-carrito" id="abrir-carrito" type="button" aria-label="Abrir mi selección">🛒 Mi selección <span id="carrito-contador" aria-live="polite">0</span></button></li>
     </ul>
   </nav>
 
-<section id="productos">
-  <h2>Nuestros productos</h2>
+  <section id="productos">
+    <h2>Nuestros productos</h2>
+    <p class="carrito-intro">Elige tallas y cantidades. Al final podrás enviarnos una solicitud por correo o WhatsApp; no se paga en esta web.</p>
+    <div class="productos-container">
+      <div class="producto" data-id="camiseta-rfd" data-name="Camiseta 'Ready For Departure'" data-price="19.90" data-image="camiseta1-frontal.png">
+        <div class="carousel">
+          <img src="camiseta1-frontal.png" class="producto-img active" alt="Frontal camiseta 'Ready For Departure'">
+          <img src="camiseta1-detras.png" class="producto-img" alt="Trasera camiseta 'Ready For Departure'">
+          <button class="prev" type="button" aria-label="Ver fotografía anterior">←</button>
+          <button class="next" type="button" aria-label="Ver fotografía siguiente">→</button>
+        </div>
+        <h3>Camiseta 'Ready For Departure'</h3>
+        <p class="precio-producto">19,90 €</p>
+        <div class="opciones-producto">
+          <label>Talla
+            <select class="talla-producto" aria-label="Talla de camiseta Ready For Departure" required>
+              <option value="" selected>Seleccionar talla</option>
+              <option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option>
+            </select>
+          </label>
+          <label>Cantidad
+            <input class="cantidad-producto" type="number" min="1" max="10" step="1" value="1" inputmode="numeric">
+          </label>
+          <button type="button" class="btn-anadir">Añadir al carrito</button>
+        </div>
+      </div>
 
-  <div class="productos-container">
-  <!-- Producto 1 - Camiseta R4D-->
-    <div class="producto">
-      <div class="carousel">
-        <img src="camiseta1-frontal.png" class="producto-img active" alt="Frontal camiseta 'Ready For Departure'">
-        <img src="camiseta1-detras.png" class="producto-img" alt="Trasera camiseta 'Ready For Departure'">
-        <button class="prev">←</button>
-        <button class="next">→</button>
+      <div class="producto" data-id="camiseta-hh" data-name="Camiseta 'Holding Hands'" data-price="19.90" data-image="camiseta2-frontal.png">
+        <div class="carousel">
+          <img src="camiseta2-frontal.png" class="producto-img active" alt="Frontal camiseta 'Holding Hands'">
+          <img src="camiseta2-detras.png" class="producto-img" alt="Trasera camiseta 'Holding Hands'">
+          <button class="prev" type="button" aria-label="Ver fotografía anterior">←</button>
+          <button class="next" type="button" aria-label="Ver fotografía siguiente">→</button>
+        </div>
+        <h3>Camiseta 'Holding Hands'</h3>
+        <p class="precio-producto">19,90 €</p>
+        <div class="opciones-producto">
+          <label>Talla
+            <select class="talla-producto" aria-label="Talla de camiseta Holding Hands" required>
+              <option value="" selected>Seleccionar talla</option>
+              <option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option>
+            </select>
+          </label>
+          <label>Cantidad
+            <input class="cantidad-producto" type="number" min="1" max="10" step="1" value="1" inputmode="numeric">
+          </label>
+          <button type="button" class="btn-anadir">Añadir al carrito</button>
+        </div>
       </div>
-      <h3>Camiseta 'Ready For Departure'</h3>
-      <p>19,90 €</p>
-      <a class="cta-email" href="mailto:bloque5oficial@gmail.com?subject=Pedido%20Camiseta%20Ready%20For%20Departure&body=Buenos%20días,%20estaría%20interesado%20en%20comprar%20una%20talla%20X%20de%20%C2%A1Camiseta%20'Ready%20For%20Departure'!%20%C2%BFQu%C3%A9%20tengo%20que%20hacer%3F">Pedir talla</a>
-    </div>
-  <!-- Producto 2 - Camiseta HH-->
-        <div class="producto">
-      <div class="carousel">
-        <img src="camiseta2-frontal.png" class="producto-img active" alt="Frontal camiseta 'Holding Hands'">
-        <img src="camiseta2-detras.png" class="producto-img" alt="Trasera camiseta 'Holding Hands'">
-        <button class="prev">←</button>
-        <button class="next">→</button>
-      </div>
-      <h3>Camiseta 'Holding Hands'</h3>
-      <p>19,90 €</p>
-      <a class="cta-email" href="mailto:bloque5oficial@gmail.com?subject=Pedido%20Camiseta%20Holding%20Hands&body=Buenos%20días,%20estaría%20interesado%20en%20comprar%20una%20talla%20X%20de%20%C2%A1Camiseta%20'Holding%20Hands'!%20%C2%BFQu%C3%A9%20tengo%20que%20hacer%3F">Pedir talla</a>
-    </div>
-    
-   <!--Producto 3 -->
-    <div class="producto">
-      <div class="carousel">
-        <img src="sudadera1-frontal.png" class="producto-img active" alt="Frontal sudadera granate">
-        <img src="sudadera1-detras.png" class="producto-img" alt="Trasera sudadera granate">
-        <button class="prev">←</button>
-        <button class="next">→</button>
-      </div>
-      <h3>Sudadera Granate</h3>
-      <p>29,90 €</p>
-      <a class="cta-email" href="mailto:bloque5oficial@gmail.com?subject=Pedido%20Sudadera%20Granate&body=Buenos%20días,%20estaría%20interesado%20en%20comprar%20una%20talla%20X%20de%20Sudadera%20Granate.%20%C2%BFQu%C3%A9%20tengo%20que%20hacer%3F">Pedir talla</a>
-    </div>
 
-     <!--Producto 4 -->
-    <div class="producto">
-      <div class="carousel">
-        <img src="sudadera2-frontal.png" class="producto-img active" alt="Frontal sudadera verde">
-        <img src="sudadera2-detras.png" class="producto-img" alt="Trasera sudadera verde">
-        <button class="prev">←</button>
-        <button class="next">→</button>
+      <div class="producto" data-id="sudadera-granate" data-name="Sudadera Granate" data-price="29.90" data-image="sudadera1-frontal.png">
+        <div class="carousel">
+          <img src="sudadera1-frontal.png" class="producto-img active" alt="Frontal sudadera granate">
+          <img src="sudadera1-detras.png" class="producto-img" alt="Trasera sudadera granate">
+          <button class="prev" type="button" aria-label="Ver fotografía anterior">←</button>
+          <button class="next" type="button" aria-label="Ver fotografía siguiente">→</button>
+        </div>
+        <h3>Sudadera Granate</h3>
+        <p class="precio-producto">29,90 €</p>
+        <div class="opciones-producto">
+          <label>Talla
+            <select class="talla-producto" aria-label="Talla de sudadera granate" required>
+              <option value="" selected>Seleccionar talla</option>
+              <option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option>
+            </select>
+          </label>
+          <label>Cantidad
+            <input class="cantidad-producto" type="number" min="1" max="10" step="1" value="1" inputmode="numeric">
+          </label>
+          <button type="button" class="btn-anadir">Añadir al carrito</button>
+        </div>
       </div>
-      <h3>Sudadera Verde</h3>
-      <p>29,90 €</p>
-      <a class="cta-email" href="mailto:bloque5oficial@gmail.com?subject=Pedido%20Sudadera%20Verde&body=Buenos%20días,%20estaría%20interesado%20en%20comprar%20una%20talla%20X%20de%20Sudadera%20Verde.%20%C2%BFQu%C3%A9%20tengo%20que%20hacer%3F">Pedir talla</a>
-    </div>
-    
-     <!--Producto 5 -->
-    <div class="producto">
-      <div class="carousel">
-        <img src="sudadera3-frontal.jpg" class="producto-img active" alt="Frontal sudadera azul">
-        <img src="sudadera3-detras.png" class="producto-img" alt="Trasera sudadera azul">
-        <button class="prev">←</button>
-        <button class="next">→</button>
+
+      <div class="producto" data-id="sudadera-verde" data-name="Sudadera Verde" data-price="29.90" data-image="sudadera2-frontal.png">
+        <div class="carousel">
+          <img src="sudadera2-frontal.png" class="producto-img active" alt="Frontal sudadera verde">
+          <img src="sudadera2-detras.png" class="producto-img" alt="Trasera sudadera verde">
+          <button class="prev" type="button" aria-label="Ver fotografía anterior">←</button>
+          <button class="next" type="button" aria-label="Ver fotografía siguiente">→</button>
+        </div>
+        <h3>Sudadera Verde</h3>
+        <p class="precio-producto">29,90 €</p>
+        <div class="opciones-producto">
+          <label>Talla
+            <select class="talla-producto" aria-label="Talla de sudadera verde" required>
+              <option value="" selected>Seleccionar talla</option>
+              <option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option>
+            </select>
+          </label>
+          <label>Cantidad
+            <input class="cantidad-producto" type="number" min="1" max="10" step="1" value="1" inputmode="numeric">
+          </label>
+          <button type="button" class="btn-anadir">Añadir al carrito</button>
+        </div>
       </div>
-      <h3>Sudadera Azul</h3>
-      <p>29,90 €</p>
-      <a class="cta-email" href="mailto:bloque5oficial@gmail.com?subject=Pedido%20Sudadera%20Azul&body=Buenos%20días,%20estaría%20interesado%20en%20comprar%20una%20talla%20X%20de%20Sudadera%20Azul.%20%C2%BFQu%C3%A9%20tengo%20que%20hacer%3F">Pedir talla</a>
+
+      <div class="producto" data-id="sudadera-azul" data-name="Sudadera Azul" data-price="29.90" data-image="sudadera3-frontal.jpg">
+        <div class="carousel">
+          <img src="sudadera3-frontal.jpg" class="producto-img active" alt="Frontal sudadera azul">
+          <img src="sudadera3-detras.png" class="producto-img" alt="Trasera sudadera azul">
+          <button class="prev" type="button" aria-label="Ver fotografía anterior">←</button>
+          <button class="next" type="button" aria-label="Ver fotografía siguiente">→</button>
+        </div>
+        <h3>Sudadera Azul</h3>
+        <p class="precio-producto">29,90 €</p>
+        <div class="opciones-producto">
+          <label>Talla
+            <select class="talla-producto" aria-label="Talla de sudadera azul" required>
+              <option value="" selected>Seleccionar talla</option>
+              <option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option>
+            </select>
+          </label>
+          <label>Cantidad
+            <input class="cantidad-producto" type="number" min="1" max="10" step="1" value="1" inputmode="numeric">
+          </label>
+          <button type="button" class="btn-anadir">Añadir al carrito</button>
+        </div>
+      </div>
     </div>
-    
-  </div>
-</section>
+  </section>
 
-<script>
-  document.querySelectorAll('.carousel').forEach(carousel => {
-    const imgs = carousel.querySelectorAll('.producto-img');
-    let showing = 0;
+  <div id="carrito-fondo" class="carrito-fondo" hidden></div>
+  <aside class="carrito-panel" id="carrito-panel" role="dialog" aria-modal="true" aria-label="Tu carrito de compra" aria-hidden="true" tabindex="-1">
+    <div class="carrito-cabecera">
+      <h2>Tu selección</h2>
+      <button type="button" class="carrito-cerrar" id="cerrar-carrito" aria-label="Cerrar carrito">×</button>
+    </div>
+    <div id="carrito-lista" class="carrito-lista"></div>
+    <div class="carrito-pie">
+      <div class="carrito-total"><span>Subtotal</span><strong id="carrito-total">0,00 €</strong></div>
+      <p class="carrito-nota">Subtotal orientativo, sin gastos de envío. Enviar una solicitud no confirma la disponibilidad ni constituye una compra. Bloque 5 responderá con las condiciones antes de acordar ningún pago.</p>
+      <a href="#" id="enviar-whatsapp" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
+      <p class="carrito-instruccion-wa" id="instruccion-whatsapp">WhatsApp: elige el contacto de Bloque 5 antes de enviar el mensaje.</p>
+      <a href="#" id="enviar-carrito" class="btn-finalizar">Consultar por correo electrónico</a>
+      <button type="button" id="copiar-carrito" class="btn-copiar">Copiar resumen de la consulta</button>
+    </div>
+  </aside>
+  <div id="carrito-aviso" class="carrito-aviso" role="status" aria-live="polite"></div>
 
-    const toggleImages = () => {
-      imgs.forEach((img, i) => {
-        img.classList.toggle('active', i === showing);
+  <script>
+    document.querySelectorAll('.carousel').forEach(carousel => {
+      const imgs = carousel.querySelectorAll('.producto-img');
+      let showing = 0;
+      const toggleImages = () => imgs.forEach((img, i) => img.classList.toggle('active', i === showing));
+      carousel.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          showing = (showing + (btn.classList.contains('prev') ? imgs.length - 1 : 1)) % imgs.length;
+          toggleImages();
+        });
       });
-    };
-
-    carousel.querySelectorAll('button').forEach(btn => {
-      btn.addEventListener('click', () => {
-        showing = showing === 0 ? 1 : 0; // Alterna entre 0 y 1
-        toggleImages();
-      });
+      toggleImages();
     });
-
-    toggleImages(); // Inicializa el primer estado
-  });
-</script>
-
-
+  </script>
 </body>
 </html>
-
