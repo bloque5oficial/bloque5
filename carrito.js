@@ -78,8 +78,7 @@
       ...lines, '',
       `Subtotal orientativo: ${money(subtotal)}`,
       'Gastos de envío: pendientes de confirmar', '',
-      '¿Podéis confirmarme el stock, precio final con envío y, si es posible, cómo acordar el pago por Bizum o transferencia?'
-      , 'Esta es una consulta, no un pedido confirmado ni un pago.', '',
+      '¿Podéis confirmarme el stock, precio final con envío y cómo acordar el pago por Bizum o transferencia?', '',
       'Gracias.'
     ].join('\n');
   }
