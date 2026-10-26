@@ -1,0 +1,241 @@
+body {
+  font-family: 'Solitreo', cursive;
+  background-color: #0c2392;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Racing Sans One', sans-serif;
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+p {
+  font-size: 1.3em;
+  color: #f0f0f0;
+}
+nav {
+  background-color: #000c3f; /* azul navy más oscuro */
+  padding: 10px 0;
+}
+
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Racing Sans One', sans-serif;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.nav li a:hover {
+  color: #ffcc00;
+}
+header {
+  background-color: white;
+  padding: 40px 0;
+}
+
+.logo {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+                                                      #contacto {
+  padding: 50px 20px;
+  background-color: #0c2392;
+  color: white;
+  text-align: center;
+}
+
+#contacto h2 {
+  font-family: 'Racing Sans One', sans-serif;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.contact-items {
+  max-width: 400px;
+  margin: 0 auto 30px auto;
+  font-family: 'Solitreo', cursive;
+  font-size: 1.1em;
+}
+
+.contact-items p {
+  margin: 10px 0;
+}
+
+.contact-items a {
+  color: white !important;
+  text-decoration: underline;
+}
+
+.contact-items hr {
+  border: none;
+  border-top: 1px solid white;
+  width: 60%;
+  margin: 10px auto;
+}
+
+.cta-email {
+  display: inline-block;
+  background-color: transparent;
+  color: white !important;
+  padding: 12px 24px;
+  border: 2px solid white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-email:hover {
+  background-color: white;
+  color: #0c2392 !important;
+}
+
+.entrada-img {
+  max-width: 500px !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto 20px auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 3px black;
+}
+
+.entrada-blog p {
+  margin-bottom: 6px;
+  line-height: 1.4;
+  }
+<!--productos-->
+                                                #productos {
+  padding: 50px 20px;
+  background-color: #0c2392;
+  color: white;
+  text-align: center;
+}
+
+.productos-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.producto {
+  background-color: #000c3f;
+  border-radius: 12px;
+  padding: 20px;
+  width: 220px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+.producto-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 2px solid white;
+  display: none; 
+  margin: 0 auto 10px auto;
+}
+
+.producto-img.active {
+  display: block;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.7);
+  border: none;
+  font-size: 1.2em;
+  padding: 4px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.carousel .prev {
+  left: -10px;
+}
+
+.carousel .next {
+  right: -10px;
+}
+
+.hero {
+  background-image: url('fotoinicio1.JPG'); 
+  background-size: cover;
+  background-position: center;
+  padding: 120px 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-family: 'Racing Sans One', sans-serif;
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  background-color: white;
+  color: #0c2392;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #ffcc00;
+  color: #000;
+}

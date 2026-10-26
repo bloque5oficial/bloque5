@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Productos - Bloque 5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Solitreo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <img src="logotext.png" alt="Logo Bloque 5" class="logo">
+  </header>
+
+  <nav>
+    <ul class="nav">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="novedades.html">Novedades</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+<section id="productos">
+  <h2>Nuestros productos</h2>
+
+  <div class="productos-container">
+  <!-- Producto 1 - Camiseta R4D-->
+    <div class="producto">
+      <div class="carousel">
+        <img src="camiseta1-frontal.png" class="producto-img active" alt="Frontal camiseta 'Ready For Departure'">
+        <img src="camiseta1-detras.png" class="producto-img" alt="Trasera camiseta 'Ready For Departure'">
+        <button class="prev">←</button>
+        <button class="next">→</button>
+      </div>
+      <h3>Camiseta 'Ready For Departure'</h3>
+      <p>19,90 €</p>
+      <a class="cta-email" href="mailto:bloque5oficial@gmail.com?subject=Pedido%20Camiseta%20Ready%20For%20Departure&body=Buenos%20días,%20estaría%20interesado%20en%20comprar%20una%20talla%20X%20de%20%C2%A1Camiseta%20'Ready%20For%20Departure'!%20%C2%BFQu%C3%A9%20tengo%20que%20hacer%3F">Pedir talla</a>
+    </div>
+  <!-- Producto 2 - Camiseta HH-->
+        <div class="producto">
+      <div class="carousel">
+        <img src="camiseta2-frontal.png" class="producto-img active" alt="Frontal camiseta 'Holding Hands'">
+        <img src="camiseta2-detras.png" class="producto-img" alt="Trasera camiseta 'Holding Hands'">
+        <button class="prev">←</button>
+        <button class="next">→</button>
+      </div>
+      <h3>Camiseta 'Holding Hands'</h3>
+      <p>19,90 €</p>
+      <a class="cta-email" href="mailto:bloque5oficial@gmail.com?subject=Pedido%20Camiseta%20Holding%20Hands&body=Buenos%20días,%20estaría%20interesado%20en%20comprar%20una%20talla%20X%20de%20%C2%A1Camiseta%20'Holding%20Hands'!%20%C2%BFQu%C3%A9%20tengo%20que%20hacer%3F">Pedir talla</a>
+    </div>
+    
+   <!--Producto 3 -->
+    <div class="producto">
+      <div class="carousel">
+        <img src="sudadera1-frontal.png" class="producto-img active" alt="Frontal sudadera granate">
+        <img src="sudadera1-detras.png" class="producto-img" alt="Trasera sudadera granate">
+        <button class="prev">←</button>
+        <button class="next">→</button>
+      </div>
+      <h3>Sudadera Granate</h3>
+      <p>29,90 €</p>
+      <a class="cta-email" href="mailto:bloque5oficial@gmail.com?subject=Pedido%20Sudadera%20Granate&body=Buenos%20días,%20estaría%20interesado%20en%20comprar%20una%20talla%20X%20de%20Sudadera%20Granate.%20%C2%BFQu%C3%A9%20tengo%20que%20hacer%3F">Pedir talla</a>
+    </div>
+
+     <!--Producto 4 -->
+    <div class="producto">
+      <div class="carousel">
+        <img src="sudadera2-frontal.png" class="producto-img active" alt="Frontal sudadera verde">
+        <img src="sudadera2-detras.png" class="producto-img" alt="Trasera sudadera verde">
+        <button class="prev">←</button>
+        <button class="next">→</button>
+      </div>
+      <h3>Sudadera Verde</h3>
+      <p>29,90 €</p>
+      <a class="cta-email" href="mailto:bloque5oficial@gmail.com?subject=Pedido%20Sudadera%20Verde&body=Buenos%20días,%20estaría%20interesado%20en%20comprar%20una%20talla%20X%20de%20Sudadera%20Verde.%20%C2%BFQu%C3%A9%20tengo%20que%20hacer%3F">Pedir talla</a>
+    </div>
+    
+     <!--Producto 5 -->
+    <div class="producto">
+      <div class="carousel">
+        <img src="sudadera3-frontal.jpg" class="producto-img active" alt="Frontal sudadera azul">
+        <img src="sudadera3-detras.png" class="producto-img" alt="Trasera sudadera azul">
+        <button class="prev">←</button>
+        <button class="next">→</button>
+      </div>
+      <h3>Sudadera Azul</h3>
+      <p>29,90 €</p>
+      <a class="cta-email" href="mailto:bloque5oficial@gmail.com?subject=Pedido%20Sudadera%20Azul&body=Buenos%20días,%20estaría%20interesado%20en%20comprar%20una%20talla%20X%20de%20Sudadera%20Azul.%20%C2%BFQu%C3%A9%20tengo%20que%20hacer%3F">Pedir talla</a>
+    </div>
+    
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.carousel').forEach(carousel => {
+    const imgs = carousel.querySelectorAll('.producto-img');
+    let showing = 0;
+
+    const toggleImages = () => {
+      imgs.forEach((img, i) => {
+        img.classList.toggle('active', i === showing);
+      });
+    };
+
+    carousel.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        showing = showing === 0 ? 1 : 0; // Alterna entre 0 y 1
+        toggleImages();
+      });
+    });
+
+    toggleImages(); // Inicializa el primer estado
+  });
+</script>
+
+
+</body>
+</html>
+
